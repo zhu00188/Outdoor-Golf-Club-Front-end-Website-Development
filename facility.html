@@ -1,0 +1,436 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>GolfSpace - Facilities</title>
+</head>
+
+<body>
+
+    <div class="preloader_area_wrap">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+
+
+    <!-- header will be loaded from partials/header.html -->
+    <div id="site-header-placeholder"></div>
+    <script>
+        (function () {
+            var p = document.getElementById('site-header-placeholder');
+            if (!p) return;
+            fetch('partials/header.html').then(function (r) {
+                if (!r.ok) throw new Error('Failed to load header');
+                return r.text();
+            }).then(function (html) {
+                p.outerHTML = html;
+            }).catch(function (err) {
+                console.error(err);
+            });
+        })();
+    </script>
+
+
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-wrapper">
+                        <div class="breadcrumb-inner">
+                            <h1>Facilites: Member Lounge and Bar</h1>
+                            <span><a href="index.html">Home<i class="fas fa-angle-right"></i></a>Facilites</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="facilities-area sec-mar-top">
+        <div class="container">
+            <div class="member-facilities white">
+                <div class="row justify-content-around">
+                    <div class="col-auto">
+                        <div class="member-facility">
+                            <div class="icon">
+                                <img src="assets/img/icons/facility-restaurant.png" alt="">
+                            </div>
+                            <a href="facility.html">Restaurant</a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="member-facility">
+                            <div class="icon">
+                                <img src="assets/img/icons/facility-swimming-pool.png" alt="">
+                            </div>
+                            <a href="facility.html">Swimming Pool</a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="member-facility">
+                            <div class="icon">
+                                <img src="assets/img/icons/facility-locker-room.png" alt="">
+                            </div>
+                            <a href="facility.html">Locker Room</a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="member-facility">
+                            <div class="icon">
+                                <img src="assets/img/icons/facility-fitness-zone.png" alt="">
+                            </div>
+                            <a href="facility.html">Fitness Zone</a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="member-facility">
+                            <div class="icon">
+                                <img src="assets/img/icons/facility-party-center.png" alt="">
+                            </div>
+                            <a href="facility.html">Party Center</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="facility-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-6 or2">
+                    <div class="facility-left">
+                        <h2>Member Lounge & Event Spaces</h2>
+                        <p>Enjoy the social heart of Golf Space — where dining and celebration come together. Our
+                            elegant restaurant and private event spaces are designed for both comfort and
+                            sophistication. Whether it’s a post-game meal, a weekend brunch, or a milestone celebration,
+                            you’ll find the perfect setting here.</p>
+                        <p>We offer breakfast, lunch, and dinner menus, along with a curated beverage list and seasonal
+                            chef’s specials featuring local ingredients. Members can reserve our stylish Party Center
+                            for private gatherings, tournaments, or corporate events, complete with catering services
+                            and customized décor.</p>
+                        <ul class="field-points">
+                            <li><i class="bi bi-check2-circle"></i> Scenic Outdoor Dining</li>
+                            <li><i class="bi bi-check2-circle"></i> Fresh Seasonal Menu</li>
+                            </li>
+                            <li><i class="bi bi-check2-circle"></i> Private Group Dining</li>
+                            <li><i class="bi bi-check2-circle"></i> Exclusive Member Events</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6 or1">
+                    <div class="facility-images">
+                        <div class="img-1">
+                            <img src="assets/img/facility-1.jpg" alt="">
+                        </div>
+                        <div class="img-2">
+                            <img src="assets/img/facility-2.jpg" alt="">
+                        </div>
+                        <div class="img-3">
+                            <img src="assets/img/facility-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="serve-area sec-mar-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="serve-images">
+                        <div class="img-1">
+                            <img src="assets/img/serve-1.jpg" alt="">
+                        </div>
+                        <div class="img-2">
+                            <img src="assets/img/serve-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6">
+                    <div class="serve-content">
+                        <h2>Wellness & Recreation</h2>
+                        <p>At Golf Space, <b>wellness</b> is an essential part of the golfing lifestyle.
+                            Members can unwind by
+                            the pool, refresh in our modern locker rooms, or stay active in the fitness zone — all
+                            designed for balance and comfort.</p>
+                        <p>The <b>outdoor swimming pool</b> offers a peaceful escape surrounded by greenery, while our
+                            locker rooms
+                            provide secure storage and premium amenities for your convenience.</p>
+                        <p>Our <b>fitness zone</b> features advanced equipment and personalized training support to help
+                            you
+                            build strength, flexibility, and confidence — both on and off the course.</p>
+                        <div class="serve-features">
+                            <div class="single-serve">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="serve-cnt">
+                                    <span>24/7 Member Support.</span>
+                                </div>
+                            </div>
+                            <div class="single-serve">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="serve-cnt">
+                                    <span>Timely Event Scheduling.</span>
+                                </div>
+                            </div>
+                            <div class="single-serve">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="serve-cnt">
+                                    <span>Clean Club Facilities</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="benifit-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-xl-7">
+                    <div class="title white text-center">
+                        <span>Benifit</span>
+                        <h2>See what is in our club.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="single-benifit">
+                        <div class="icon">
+                            <img src="assets/img/icons/benifit-icon-1.png" alt="">
+                        </div>
+                        <h4>Our Caddies</h4>
+                        <p>Our professional caddies bring expertise and friendliness to every round, helping you
+                            plan shots, read greens, and elevate your overall play.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="single-benifit">
+                        <div class="icon">
+                            <img src="assets/img/icons/benifit-icon-2.png" alt="">
+                        </div>
+                        <h4>Pro Instructors</h4>
+                        <p>Learn from experienced golf professionals who tailor lessons to your skill level and
+                            goals, ensuring steady progress and confident performance.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="single-benifit">
+                        <div class="icon">
+                            <img src="assets/img/icons/benifit-icon-3.png" alt="">
+                        </div>
+                        <h4>Monthly Events</h4>
+                        <p>Join a vibrant community through our monthly tournaments and social events — a perfect
+                            blend of competition and camaraderie.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="single-benifit">
+                        <div class="icon">
+                            <img src="assets/img/icons/benifit-icon-4.png" alt="">
+                        </div>
+                        <h4>Yearly Event</h4>
+                        <p>Celebrate the spirit of golf at our annual championship and gala, featuring exciting
+                            prizes, live entertainment, and lasting memories.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="testimonial-area sec-mar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-xl-7">
+                    <div class="title">
+                        <span>Testimonials</span>
+                        <h2>Let’s hear what our valued members say.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper testimonial">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-slider">
+                            <div class="row gx-0 align-items-end">
+                                <div class="col-md-7 col-lg-7 or2">
+                                    <div class="testimonial-content">
+                                        <div class="star">
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                        </div>
+                                        <h4>Olivia Turner</h4>
+                                        <span>Executive CEO</span>
+                                        <p>“Golf Space is more than a club — it’s a community. The staff are
+                                            exceptional,
+                                            the facilities are world-class, and the atmosphere is both relaxing and
+                                            inspiring. Every visit feels like a retreat from the busy world.”</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 or1">
+                                    <div class="testimonial-client">
+                                        <div class="client-img">
+                                            <img src="assets/img/testimonial-1.png" alt="">
+                                            <div class="client-shape">
+                                                <img src="assets/img/shape-2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-slider">
+                            <div class="row gx-0 align-items-end">
+                                <div class="col-md-7 col-lg-7 or2">
+                                    <div class="testimonial-content">
+                                        <div class="star">
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                        </div>
+                                        <h4>Ethan Brooks</h4>
+                                        <span>Entrepreneur</span>
+                                        <p>“The level of professionalism and attention to detail here is incredible.
+                                            From
+                                            the restaurant to the course maintenance, everything reflects true passion
+                                            for the game.”</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 or1">
+                                    <div class="testimonial-client">
+                                        <div class="client-img">
+                                            <img src="assets/img/testimonial-3.png" alt="">
+                                            <div class="client-shape">
+                                                <img src="assets/img/shape-2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="newsletter-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="subscribe-newsletter">
+                        <span>Stay In Touch</span>
+                        <h2>Newsletter</h2>
+                        <form action="#" method="post">
+                            <input type="email" name="email" placeholder="Enter Your Email Here">
+                            <input type="submit" value="Notify Now">
+                        </form>
+                        <b>Subscribe</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer will be loaded from partials/footer.html -->
+    <div id="site-footer-placeholder"></div>
+    <script>
+        (function () {
+            var p = document.getElementById('site-footer-placeholder');
+            if (!p) return;
+            fetch('partials/footer.html').then(function (r) {
+                if (!r.ok) throw new Error('Failed to load footer');
+                return r.text();
+            }).then(function (html) {
+                p.outerHTML = html;
+            }).catch(function (err) {
+                console.error(err);
+            });
+        })();
+    </script>
+
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/jquery.lazy.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+
+    <script src="assets/js/anime.min.js"></script>
+
+    <script src="assets/js/waypoints.min.js"></script>
+
+    <script src="assets/js/jquery.counterup.min.js"></script>
+
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <script src="assets/js/masonry.pkgd.min.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
