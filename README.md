@@ -1,38 +1,36 @@
+# ⛳ Golf Space — Front-End Portfolio Project
 
-⛳ Golf Space — Front-End Portfolio Project
+**A modern, accessible, and responsive golf club website built as a frontend portfolio project using HTML, CSS (Bootstrap 5), and JavaScript.**
 
-A modern, accessible, and responsive golf club website built as a frontend portfolio project using HTML, CSS (Bootstrap 5), and JavaScript.
-
-✨ Overview
+## ✨ Overview
 
 Golf Space showcases a clean and professional design focused on user experience, visual balance, and responsive layout. It serves as a demonstration of modern front-end development practices — ideal for presenting a professional outdoor golf club website.
 
-🏌️‍♂️ Key Features
+## 🏌️‍♂️ Key Features
 
-- 🏠 Homepage with hero banner and club highlights
-- 🎯 Multipurpose Design suitable for any modern club or hospitality site
-- 🧱 Bootstrap v5 Framework for responsive layout
-- 🖼️ Unlimited Image Variants for gallery and facility sections
-- 💎 Modern & Clean UI with subtle animations
-- 📌 Sticky Header for easy navigation
-- 🌀 Smooth Scrolling user experience
-- ✅ W3C Validated HTML & CSS
-- 💻 Clean & Professional Code structure
-- 📱 Fully Responsive on all devices
-- ⚙️ Easy to Customize
-- 🔍 SEO Friendly
-- 🌐 Cross-Browser Compatible
+- **Homepage:** Hero banner with club highlights and call-to-action.
+- **Multipurpose design:** Works for clubs, resorts, and hospitality sites.
+- **Bootstrap v5:** Responsive grid and utilities for fast layout.
+- **Gallery & facilities:** Support for unlimited image variants.
+- **Modern UI:** Clean visuals with subtle animations.
+- **Sticky header:** Easy site navigation.
+- **Smooth scrolling:** Improved user experience.
+- **Standards-compliant:** W3C validated HTML & CSS.
+- **Clean codebase:** Readable and modular front-end structure.
+- **Responsive:** Looks great on phones, tablets, and desktops.
+- **Customizable:** Easy to adapt colors, typography, and content.
+- **SEO friendly & cross-browser compatible.**
 
-🧩 Tech Stack
+## 🧩 Tech Stack
 
 - HTML5
 - CSS3 (Bootstrap + custom styles)
 - JavaScript (Vanilla + small libraries)
-- Assets: Images, fonts, and vendor scripts
+- Assets: images, fonts, and vendor scripts
 
-📁 Project Structure
+## 📁 Project Structure
 
-Top-level files
+**Top-level files**
 
 - `index.html` — Home page
 - `about.html` — About Golf Space
@@ -43,44 +41,49 @@ Top-level files
 - `blog.html`, `blog-details.html` — Blog listing and detail pages
 - `contact.html` — Contact information
 
-Folders
+**Folders**
 
 - `assets/` — CSS, JS, images, and fonts
 - `partials/` — Shared `header.html` and `footer.html`
 
-💻 Run Locally
+## 💻 Run Locally
 
-Clone this repository:
+1. Clone this repository:
 
-Open `index.html` directly in your browser — no build required.
-
-(Optional) Serve locally for smoother routing:
-
+```bash
+git clone https://github.com/<your-username>/Golf-Space.git
+cd Golf-Space
 ```
+
+2. Open `index.html` directly in your browser — no build required.
+
+Optional: Serve locally for smoother routing and file serving:
+
+```bash
 python -m http.server 8000
 ```
 
 or
 
-```
+```bash
 npx serve .
 ```
 
 Then visit: http://localhost:8000
 
-🚀 Deployment
+## 🚀 Deployment
 
 This repository is GitHub Pages–ready and easily deployable to any static hosting provider.
 
 
-🌍 Live Demo
+## 🌍 Live Demo
 
 🔗 https://zhu00188.github.io/Outdoor-Golf-Club-Front-end-Website-Development/
 
 
-📝 Notes
+## 📝 Notes
 
-This is a frontend portfolio project, designed to demonstrate:
+This frontend portfolio project demonstrates:
 
 - Responsive web design and UX principles
 - Accessibility and semantic HTML
