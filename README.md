@@ -50,11 +50,6 @@ Golf Space showcases a clean and professional design focused on user experience,
 
 1. Clone this repository:
 
-```bash
-git clone https://github.com/<your-username>/Golf-Space.git
-cd Golf-Space
-```
-
 2. Open `index.html` directly in your browser — no build required.
 
 Optional: Serve locally for smoother routing and file serving:
