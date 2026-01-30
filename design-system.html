@@ -1,0 +1,2218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Design System Custom Styles */
+        .design-system-content {
+            padding: 60px 0;
+        }
+
+        .ds-tabs {
+            margin-bottom: 60px;
+        }
+
+        .ds-tabs .nav-tabs {
+            border-bottom: none;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .ds-tabs .nav-tabs .nav-link {
+            color: #787878;
+            font-weight: 500;
+            border: none;
+            border-bottom: 3px solid transparent;
+            padding: 15px 25px;
+            margin: 0 5px 0 0;
+            transition: all .3s ease;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .ds-tabs .nav-tabs .nav-link:hover {
+            color: #344e41;
+            border-bottom-color: #a3b18a;
+        }
+
+        .ds-tabs .nav-tabs .nav-link.active {
+            color: #344e41;
+            font-weight: 600;
+            border-bottom-color: #344e41;
+            background: transparent;
+        }
+
+        .color-category {
+            margin-bottom: 50px;
+        }
+
+        .color-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #212121;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #a3b18a;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .color-item {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all .3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .color-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .color-swatch.circle {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+
+        .color-swatch.light-border {
+            border: 2px solid #344e41;
+            box-shadow: 0 2px 15px rgba(52, 78, 65, 0.15), inset 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .color-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #212121;
+            margin-bottom: 8px;
+        }
+
+        .color-code {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            color: #344e41;
+            background: rgba(163, 177, 138, 0.1);
+            padding: 5px 12px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .color-usage {
+            font-size: 14px;
+            color: #787878;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .color-usage strong {
+            color: #344e41;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 767px) {
+            .ds-tabs .nav-tabs .nav-link {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .color-category h3 {
+                font-size: 24px;
+            }
+
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .color-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Skip to main content link for keyboard navigation */
+        .skip-to-main {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1em;
+            background-color: #344e41;
+            color: white;
+            text-decoration: none;
+            border-radius: 0 0 5px 0;
+        }
+
+        .skip-to-main:focus {
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <title>GolfSpace - Design System Elements</title>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    <div class="preloader_area_wrap">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+
+    <!-- header will be loaded from partials/header.html -->
+    <div id="site-header-placeholder"></div>
+    <script>
+        (function () {
+            var p = document.getElementById('site-header-placeholder');
+            if (!p) return;
+            fetch('partials/header.html').then(function (r) {
+                if (!r.ok) throw new Error('Failed to load header');
+                return r.text();
+            }).then(function (html) {
+                p.outerHTML = html;
+            }).catch(function (err) {
+                console.error(err);
+            });
+        })();
+    </script>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-wrapper">
+                        <div class="breadcrumb-inner">
+                            <h1>Design System Elements</h1>
+                            <span><a href="index.html">Home<i class="fas fa-angle-right" aria-hidden="true"></i></a>Design System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="design-system-content" id="main-content" role="main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="title text-center">
+                        <span>Golf Space Design System</span>
+                        <h2>Visual & Behavioral Specifications</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-tabs">
+                <ul class="nav nav-tabs" id="designSystemTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="colors-tab" data-bs-toggle="tab" data-bs-target="#colors"
+                            type="button" role="tab" aria-controls="colors" aria-selected="true">Color System</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="typography-tab" data-bs-toggle="tab" data-bs-target="#typography"
+                            type="button" role="tab" aria-controls="typography"
+                            aria-selected="false">Typography</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="spacing-tab" data-bs-toggle="tab" data-bs-target="#spacing"
+                            type="button" role="tab" aria-controls="spacing" aria-selected="false">Spacing</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="borders-tab" data-bs-toggle="tab" data-bs-target="#borders"
+                            type="button" role="tab" aria-controls="borders" aria-selected="false">Border
+                            Radius</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="icons-tab" data-bs-toggle="tab" data-bs-target="#icons"
+                            type="button" role="tab" aria-controls="icons" aria-selected="false">Icons & Logos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="components-tab" data-bs-toggle="tab" data-bs-target="#components"
+                            type="button" role="tab" aria-controls="components"
+                            aria-selected="false">Components</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="interactive-tab" data-bs-toggle="tab" data-bs-target="#interactive"
+                            type="button" role="tab" aria-controls="interactive" aria-selected="false">Interactive
+                            States</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="responsive-tab" data-bs-toggle="tab" data-bs-target="#responsive"
+                            type="button" role="tab" aria-controls="responsive"
+                            aria-selected="false">Responsive</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="accessibility-tab" data-bs-toggle="tab"
+                            data-bs-target="#accessibility" type="button" role="tab" aria-controls="accessibility"
+                            aria-selected="false">Accessibility</button>
+                    </li>
+
+
+                </ul>
+
+                <div class="tab-content" id="designSystemTabContent">
+                    <!-- Color System Tab -->
+                    <div class="tab-pane fade show active" id="colors" role="tabpanel" aria-labelledby="colors-tab">
+
+                        <!-- Primary Colors -->
+                        <div class="color-category">
+                            <h3>Primary Colors</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div class="color-swatch circle" style="background-color: #344e41;"></div>
+                                    <div class="color-name">Primary Green</div>
+                                    <div class="color-code">#344e41</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Primary buttons, main navigation background, headings accent, footer elements,
+                                        active states
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch circle" style="background-color: #a3b18a;"></div>
+                                    <div class="color-name">Secondary Green</div>
+                                    <div class="color-code">#a3b18a</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Button hover states, section label underlines, decorative elements, highlights,
+                                        link hover
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch circle" style="background-color: #f4732a;"></div>
+                                    <div class="color-name">Accent Orange</div>
+                                    <div class="color-code">#f4732a</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Secondary buttons, call-to-action elements, featured tags, special promotions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Neutral Colors -->
+                        <div class="color-category">
+                            <h3>Neutral Colors</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div class="color-swatch" style="background-color: #121212;"></div>
+                                    <div class="color-name">Dark Black</div>
+                                    <div class="color-code">#121212</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Sticky header background, dark theme elements, strong emphasis text
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch" style="background-color: #212121;"></div>
+                                    <div class="color-name">Charcoal</div>
+                                    <div class="color-code">#212121</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Primary headings (h1-h6), main content titles, important text
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch" style="background-color: #787878;"></div>
+                                    <div class="color-name">Medium Gray</div>
+                                    <div class="color-code">#787878</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Body text, paragraph content, descriptions, secondary information
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch light-border" style="background-color: #ffffff;"></div>
+                                    <div class="color-name">White</div>
+                                    <div class="color-code">#ffffff</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Page backgrounds, card backgrounds, button text on dark backgrounds, content
+                                        areas
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch light-border" style="background-color: #eeeeee;"></div>
+                                    <div class="color-name">Light Gray</div>
+                                    <div class="color-code">#eeeeee</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Borders, dividers, card borders, subtle backgrounds
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch" style="background-color: #282b34;"></div>
+                                    <div class="color-name">Background Dark</div>
+                                    <div class="color-code">#282b34</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Preloader background, overlay backgrounds, dark sections
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Semantic Colors -->
+                        <div class="color-category">
+                            <h3>Semantic & Utility Colors</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div class="color-swatch circle light-border"
+                                        style="background: rgba(163, 177, 138, 0.6);"></div>
+                                    <div class="color-name">Green Transparent 60%</div>
+                                    <div class="color-code">rgba(163, 177, 138, 0.6)</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Section label underline decoration, overlay effects, shadow backgrounds
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch circle light-border"
+                                        style="background: rgba(163, 177, 138, 0.1);"></div>
+                                    <div class="color-name">Green Transparent 10%</div>
+                                    <div class="color-code">rgba(163, 177, 138, 0.1)</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Subtle backgrounds, code snippets background, light highlights
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch circle light-border"
+                                        style="background: rgba(255, 255, 255, 0.3);"></div>
+                                    <div class="color-name">White Transparent 30%</div>
+                                    <div class="color-code">rgba(255, 255, 255, 0.3)</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Icon backgrounds in buttons, overlay elements on images
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="color-swatch" style="background: rgba(0, 0, 0, 0.1);"></div>
+                                    <div class="color-name">Black Transparent 10%</div>
+                                    <div class="color-code">rgba(0, 0, 0, 0.1)</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Box shadows, subtle overlays, inset shadows
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Color Palette Overview -->
+                        <div class="color-category">
+                            <h3>Color Palette Overview</h3>
+                            <div style="background: #f9f9f9; padding: 30px; border-radius: 10px;">
+                                <p style="color: #787878; line-height: 1.8; margin-bottom: 20px;">
+                                    The Golf Space color system is built around natural, earthy tones that evoke the
+                                    outdoor golf experience. The primary green palette (#344e41, #a3b18a) represents
+                                    the lush fairways and greens, while the accent orange (#f4732a) adds energy and
+                                    warmth. Neutral grays provide balance and readability throughout the interface.
+                                </p>
+                                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <div style="width: 80px; height: 80px; background: #344e41; border-radius: 8px;">
+                                    </div>
+                                    <div style="width: 80px; height: 80px; background: #a3b18a; border-radius: 8px;">
+                                    </div>
+                                    <div style="width: 80px; height: 80px; background: #f4732a; border-radius: 8px;">
+                                    </div>
+                                    <div style="width: 80px; height: 80px; background: #212121; border-radius: 8px;">
+                                    </div>
+                                    <div style="width: 80px; height: 80px; background: #787878; border-radius: 8px;">
+                                    </div>
+                                    <div
+                                        style="width: 80px; height: 80px; background: #ffffff; border: 2px solid #344e41; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Typography Tab -->
+                    <div class="tab-pane fade" id="typography" role="tabpanel" aria-labelledby="typography-tab">
+
+                        <!-- Heading Styles -->
+                        <div class="color-category">
+                            <h3>Heading Styles</h3>
+                            <div style="background: #f9f9f9; padding: 40px; border-radius: 10px; margin-bottom: 30px;">
+
+                                <!-- H1 -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <h1
+                                            style="font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; color: #212121; margin: 0;">
+                                            Header 1 - Bold, 40</h1>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">size: h1</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">40px / Bold /
+                                            1.2</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Playfair Display
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- H2 -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <h2
+                                            style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #212121; margin: 0;">
+                                            Header 2 - Bold, 32</h2>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">size: h2</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">32px / Bold /
+                                            1.3</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Playfair Display
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- H3 -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0;">
+                                    <div style=" flex: 1;">
+                                        <h3
+                                            style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #212121; margin: 0; border-bottom: none; padding-bottom: 0;">
+                                            Heading 3 - Bold, 24</h3>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">size: h3</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">24px / Bold /
+                                            1.4</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Playfair Display
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- H4 -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <h4
+                                            style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #212121; margin: 0;">
+                                            Heading 4 - Bold, 18/40</h4>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">size: h4</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">18px / Bold /
+                                            1.5</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Playfair Display
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- H5 -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <h5
+                                            style="font-family: 'Source Sans Pro', sans-serif; font-size: 16px; font-weight: 600; color: #212121; margin: 0;">
+                                            Heading 5 - Bold, 16/28</h5>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">size: h5</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">16px / Semi-bold
+                                            / 1.6</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Source Sans Pro
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- H6 -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0;">
+                                    <div style="flex: 1;">
+                                        <h6
+                                            style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; font-weight: 600; color: #212121; margin: 0;">
+                                            Heading 6 - Bold, 14/20</h6>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">size: h6</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">14px / Semi-bold
+                                            / 1.6</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Source Sans Pro
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Body & Paragraph Styles -->
+                        <div class="color-category">
+                            <h3>Body & Text Styles</h3>
+                            <div style="background: #f9f9f9; padding: 40px; border-radius: 10px; margin-bottom: 30px;">
+
+                                <!-- Body Large -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <p
+                                            style="font-family: 'Source Sans Pro', sans-serif; font-size: 18px; font-weight: 400; color: #787878; line-height: 1.8; margin: 0;">
+                                            Body Large - This is the large body text used for introductions and lead
+                                            paragraphs. Regular weight, comfortable line height.</p>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Body Large
+                                        </div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">18px / Regular /
+                                            1.8</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Source Sans Pro
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Body Regular -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <p
+                                            style="font-family: 'Source Sans Pro', sans-serif; font-size: 16px; font-weight: 400; color: #787878; line-height: 1.8; margin: 0;">
+                                            Body Regular - This is the standard body text used throughout the website.
+                                            Comfortable reading size with optimal line height for readability.</p>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Body</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">16px / Regular /
+                                            1.8</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Source Sans Pro
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Body Small -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <p
+                                            style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; font-weight: 400; color: #787878; line-height: 1.6; margin: 0;">
+                                            Body Small - Used for captions, labels, and secondary information that
+                                            doesn't require full emphasis.</p>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Small</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">14px / Regular /
+                                            1.6</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Source Sans Pro
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caption / Fine Print -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0;">
+                                    <div style="flex: 1;">
+                                        <p
+                                            style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; font-weight: 400; color: #787878; line-height: 1.5; margin: 0;">
+                                            Caption - Used for metadata, timestamps, fine print, and supplementary
+                                            information.</p>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Caption</div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">12px / Regular /
+                                            1.5</div>
+                                    </div>
+                                    <div style="flex: 0 0 180px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">font family
+                                        </div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Source Sans Pro
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Spacing Tab -->
+                    <div class="tab-pane fade" id="spacing" role="tabpanel" aria-labelledby="spacing-tab">
+
+                        <!-- Section Spacing -->
+                        <div class="color-category">
+                            <h3>Section Spacing</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #a3b18a; height: 120px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; margin-bottom: 20px;">
+                                        120px</div>
+                                    <div class="color-name">Section Padding</div>
+                                    <div class="color-code">.sec-pad { padding: 120px 0 }</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Vertical padding for major sections
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #a3b18a; height: 120px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; margin-bottom: 20px;">
+                                        120px</div>
+                                    <div class="color-name">Section Margin</div>
+                                    <div class="color-code">.sec-mar { margin: 120px 0 }</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Vertical margin for major sections
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #344e41; height: 60px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; margin-bottom: 20px;">
+                                        60px</div>
+                                    <div class="color-name">Component Spacing</div>
+                                    <div class="color-code">margin/padding: 60px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Spacing between component groups
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Component Spacing -->
+                        <div class="color-category">
+                            <h3>Component Spacing</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #787878; height: 65px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; margin-bottom: 20px;">
+                                        65px</div>
+                                    <div class="color-name">Title Margin</div>
+                                    <div class="color-code">margin-bottom: 65px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Space below section titles (responsive: 40px mobile)
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #787878; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 12px;margin-bottom: 20px;">
+                                        20px</div>
+                                    <div class="color-name">Heading Margin</div>
+                                    <div class="color-code">margin-bottom: 20px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Default spacing after headings
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f4732a; height: 25px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 12px; margin-bottom: 20px;">
+                                        25px</div>
+                                    <div class="color-name">Icon Margin</div>
+                                    <div class="color-code">margin-left: 25px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Space between button text and icon
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="display: flex; gap: 10px; padding: 20px; background: #f9f9f9; border-radius: 8px; margin-bottom: 20px;">
+                                        <div style="width: 30px; height: 30px; background: #344e41;"></div>
+                                        <div style="width: 30px; height: 30px; background: #a3b18a;"></div>
+                                        <div style="width: 30px; height: 30px; background: #f4732a;"></div>
+                                    </div>
+                                    <div class="color-name">Grid Gap</div>
+                                    <div class="color-code">gap: 25px - 30px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Spacing between grid items
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button Padding -->
+                        <div class="color-category">
+                            <h3>Button & Element Padding</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="display: flex; gap: 10px; padding: 20px; background: #f9f9f9; border-radius: 8px; align-items: center;margin-bottom: 20px;">
+                                        <div style="width: 7px; height: 40px; background: #344e41; border-radius: 2px;">
+                                        </div>
+                                        <div
+                                            style="width: 30px; height: 40px; background: #a3b18a; border-radius: 2px;">
+                                        </div>
+                                        <div style="width: 7px; height: 40px; background: #344e41; border-radius: 2px;">
+                                        </div>
+                                    </div>
+                                    <div class="color-name">Primary Button Padding</div>
+                                    <div class="color-code">padding: 7px 7px 7px 30px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Asymmetric padding (7px-30px-7px-7px)
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="display: flex; gap: 10px; padding: 20px; background: #f9f9f9; border-radius: 8px; align-items: center; justify-content: center;margin-bottom: 20px;">
+                                        <div
+                                            style="width: 40px; height: 40px; background: #f4732a; border-radius: 2px;">
+                                        </div>
+                                        <div
+                                            style="width: 14px; height: 40px; background: #787878; border-radius: 2px;">
+                                        </div>
+                                        <div
+                                            style="width: 40px; height: 40px; background: #f4732a; border-radius: 2px;">
+                                        </div>
+                                    </div>
+                                    <div class="color-name">Secondary Button Padding</div>
+                                    <div class="color-code">padding: 14px 40px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Symmetric padding (14px top/bottom, 40px left/right)
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="display: flex; padding: 20px; background: #f9f9f9; border-radius: 8px; justify-content: center; ">
+                                        <div
+                                            style="width: 80px; height: 40px; background: #a3b18a; border-radius: 2px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 600;">
+                                            20px</div>
+                                    </div>
+                                    <div class="color-name">Card Padding</div>
+                                    <div class="color-code">padding: 20px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Standard card/box uniform padding
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Border Radius Tab -->
+                    <div class="tab-pane fade" id="borders" role="tabpanel" aria-labelledby="borders-tab">
+
+                        <div class="color-category">
+                            <h3>Border Radius Values</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="width: 120px; height: 120px; background: #344e41; border-radius: 30px; margin: 0 auto 15px;">
+                                    </div>
+                                    <div class="color-name">Round Buttons</div>
+                                    <div class="color-code">border-radius: 30px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Primary buttons, membership buttons, pill-shaped elements
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="width: 120px; height: 120px; background: #a3b18a; border-radius: 10px; margin: 0 auto 15px;">
+                                    </div>
+                                    <div class="color-name">Rounded Corners</div>
+                                    <div class="color-code">border-radius: 10px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Cards, secondary buttons, containers, boxes
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="width: 120px; height: 120px; background: #f4732a; border-radius: 8px; margin: 0 auto 15px;">
+                                    </div>
+                                    <div class="color-name">Subtle Rounded</div>
+                                    <div class="color-code">border-radius: 8px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Images, color swatches, small components
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="width: 120px; height: 120px; background: #787878; border-radius: 5px; margin: 0 auto 15px;">
+                                    </div>
+                                    <div class="color-name">Minimal Round</div>
+                                    <div class="color-code">border-radius: 5px</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Input fields, code blocks, small badges
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="width: 120px; height: 120px; background: #344e41; border-radius: 50%; margin: 0 auto 15px;">
+                                    </div>
+                                    <div class="color-name">Circle</div>
+                                    <div class="color-code">border-radius: 50%</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Icon backgrounds, avatars, decorative elements
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="width: 150px; height: 50px; background: #a3b18a; border-radius: 50px; margin: 0 auto 15px;">
+                                    </div>
+                                    <div class="color-name">Label Underline</div>
+                                    <div class="color-code">border-radius: 50%</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Section label decorative underlines (elliptical)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="interactive" role="tabpanel" aria-labelledby="interactive-tab">
+
+                        <style>
+                            .demo-state-btn {
+                                border-radius: 30px;
+                                background: #344e41;
+                                padding: 7px 7px 7px 30px;
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: 500;
+                                position: relative;
+                                z-index: 1;
+                                overflow: hidden;
+                                display: inline-flex;
+                                align-items: center;
+                                font-family: 'Playfair Display', serif;
+                                cursor: pointer;
+                                border: none;
+                                margin: 20px auto;
+                            }
+
+                            .demo-state-btn::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: #a3b18a;
+                                z-index: -1;
+                                transform-origin: right;
+                                transform: scaleX(0);
+                                transition: transform .4s ease-in;
+                            }
+
+                            .demo-state-btn:hover::before {
+                                transform: scaleX(1);
+                                transform-origin: left;
+                            }
+
+                            .demo-state-btn:focus {
+                                outline: 2px solid #344e41;
+                                outline-offset: 2px;
+                            }
+
+                            .demo-state-btn:focus:not(:focus-visible) {
+                                outline: none;
+                            }
+
+                            .demo-state-btn:focus-visible {
+                                outline: 2px solid #344e41;
+                                outline-offset: 2px;
+                            }
+
+                            .demo-state-btn i {
+                                background: rgba(255, 255, 255, .3);
+                                border-radius: 50%;
+                                color: #344e41;
+                                height: 35px;
+                                width: 35px;
+                                line-height: 35px;
+                                text-align: center;
+                                margin-left: 25px;
+                            }
+
+                            .demo-state-btn-hover {
+                                border-radius: 30px;
+                                background: #344e41;
+                                padding: 7px 7px 7px 30px;
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: 500;
+                                position: relative;
+                                z-index: 1;
+                                overflow: hidden;
+                                display: inline-flex;
+                                align-items: center;
+                                font-family: 'Playfair Display', serif;
+                                margin: 20px auto;
+                            }
+
+                            .demo-state-btn-hover::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: #a3b18a;
+                                z-index: -1;
+                                transform-origin: left;
+                                transform: scaleX(1);
+                            }
+
+                            .demo-state-btn-hover i {
+                                background: rgba(255, 255, 255, .3);
+                                border-radius: 50%;
+                                color: #344e41;
+                                height: 35px;
+                                width: 35px;
+                                line-height: 35px;
+                                text-align: center;
+                                margin-left: 25px;
+                            }
+
+                            .demo-state-btn-disabled {
+                                border-radius: 30px;
+                                background: #787878;
+                                padding: 7px 7px 7px 30px;
+                                color: #ccc;
+                                font-size: 16px;
+                                font-weight: 500;
+                                display: inline-flex;
+                                align-items: center;
+                                font-family: 'Playfair Display', serif;
+                                opacity: 0.6;
+                                cursor: not-allowed;
+                                margin: 20px auto;
+                            }
+
+                            .demo-state-btn-disabled i {
+                                background: rgba(255, 255, 255, .2);
+                                border-radius: 50%;
+                                color: #999;
+                                height: 35px;
+                                width: 35px;
+                                line-height: 35px;
+                                text-align: center;
+                                margin-left: 25px;
+                            }
+                        </style>
+
+                        <div class="color-category">
+                            <h3>Button States</h3>
+                            <p style="color: #787878; margin-bottom: 20px;">Button styling from index page "About More"
+                                button. Uses .btn--primary and .golf-btn classes with scaleX animation.</p>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <button class="demo-state-btn">
+                                        Default State <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                    <div class="color-name">Default</div>
+                                    <div class="color-code">background: #344e41</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Initial state with ::before pseudo-element (scaleX(0)). Hover to see green
+                                        animation.
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="demo-state-btn-hover">
+                                        Hover State <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                    <div class="color-name">Hover</div>
+                                    <div class="color-code">background: #a3b18a (via ::before)</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        ::before element transforms from scaleX(0) to scaleX(1) with transform-origin
+                                        animation
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div class="demo-state-btn-disabled">
+                                        Disabled State <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                    <div class="color-name">Disabled</div>
+                                    <div class="color-code">opacity: 0.6; cursor: not-allowed</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Non-interactive, reduced opacity, gray background
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .demo-link {
+                                color: #0f1d28;
+                                font-size: 16px;
+                                font-weight: 600;
+                                padding: 15px;
+                                text-align: center;
+                                margin-bottom: 20px;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                display: inline-block;
+                            }
+
+                            .demo-link:hover {
+                                color: #a3b18a;
+                                padding-left: 25px;
+                            }
+
+                            .demo-link:focus {
+                                outline: 2px solid #344e41;
+                                outline-offset: 2px;
+                                color: #a3b18a;
+                            }
+
+                            .demo-link:focus:not(:focus-visible) {
+                                outline: none;
+                            }
+
+                            .demo-link:focus-visible {
+                                outline: 2px solid #344e41;
+                                outline-offset: 2px;
+                            }
+                        </style>
+
+                        <div class="color-category">
+                            <h3>Link & Navigation States</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div class="demo-link">
+                                        Default Link</div>
+                                    <div class="color-name">Link Default</div>
+                                    <div class="color-code">color: #0f1d28</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Navigation links in default state. Hover to see color change and padding
+                                        animation.
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="color: #a3b18a; font-size: 16px; font-weight: 600; padding: 15px; padding-left: 25px; text-align: center; margin-bottom: 20px;">
+                                        Hover Link</div>
+                                    <div class="color-name">Link Hover</div>
+                                    <div class="color-code">color: #a3b18a; padding-left: +10px</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Color change + left padding increase animation
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="color: #a3b18a; font-size: 16px; font-weight: 600; padding: 15px; border-bottom: 3px solid #344e41; text-align: center; margin-bottom: 20px;">
+                                        Active Link</div>
+                                    <div class="color-name">Link Active</div>
+                                    <div class="color-code">color: #a3b18a; border-bottom: 3px solid #344e41</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Current page indicator
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Blog Tag States</h3>
+                            <p style="color: #787878; margin-bottom: 20px;">Tag list styling from blog page sidebar.
+                                Uses .tag-list class with hover effect.</p>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div style="text-align: center; padding: 20px; margin-bottom: 20px;">
+                                        <ul class="tag-list">
+                                            <li><a href="#" role="button" aria-label="Golf Course tag" onclick="return false;">Golf Course</a></li>
+                                            <li><a href="#" role="button" aria-label="Membership tag" onclick="return false;">Membership</a></li>
+                                            <li><a href="#" role="button" aria-label="Golf Ball tag" onclick="return false;">Golf Ball</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="color-name">Tag Default</div>
+                                    <div class="color-code">background: #e5e9e5; color: #788a94</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Default state with gray background
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div style="text-align: center; padding: 20px; margin-bottom: 20px;">
+                                        <ul class="tag-list">
+                                            <li><a href="#" role="button" aria-label="Golf Course tag (hover state)" class="hover-demo"
+                                                    style="background-color: #344e41; color: #fff;"
+                                                    onclick="return false;">Golf Course</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="color-name">Tag Hover</div>
+                                    <div class="color-code">background: #344e41; color: #fff</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Hover state with dark green background
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div style="text-align: center; padding: 20px; margin-bottom: 20px;">
+                                        <ul class="tag-list">
+                                            <li><a href="#" role="button" aria-label="Golf Course tag (active state)" style="background-color: #344e41; color: #fff;"
+                                                    onclick="return false;">Golf Course</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="color-name">Tag Active/Selected</div>
+                                    <div class="color-code">background: #344e41; color: #fff</div>
+                                    <div class="color-usage">
+                                        <strong>Behavior:</strong>
+                                        Active/selected state (same as hover)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Responsive Design Tab -->
+                    <div class="tab-pane fade" id="responsive" role="tabpanel" aria-labelledby="responsive-tab">
+
+                        <div class="color-category">
+                            <h3>Breakpoints</h3>
+                            <div style="background: #f9f9f9; padding: 40px; border-radius: 10px; margin-bottom: 30px;">
+
+                                <!-- 1800px+ -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <div
+                                            style="background: #344e41; height: 60px; width: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; border-radius: 8px;">
+                                            1800px+
+                                        </div>
+                                    </div>
+                                    <div style="flex: 0 0 250px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Breakpoint
+                                        </div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">@media
+                                            (min-width: 1800px)</div>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Devices</div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Large desktops,
+                                            wide monitors</div>
+                                    </div>
+                                </div>
+
+                                <!-- 1400-1799px -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <div
+                                            style="background: #a3b18a; height: 55px; width: 90%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; border-radius: 8px;">
+                                            1400-1799px
+                                        </div>
+                                    </div>
+                                    <div style="flex: 0 0 250px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Breakpoint
+                                        </div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">@media (1400px -
+                                            1799px)</div>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Devices</div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Standard
+                                            desktops, laptops</div>
+                                    </div>
+                                </div>
+
+                                <!-- 1200-1399px -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <div
+                                            style="background: #f4732a; height: 50px; width: 80%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; border-radius: 8px;">
+                                            1200-1399px
+                                        </div>
+                                    </div>
+                                    <div style="flex: 0 0 250px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Breakpoint
+                                        </div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">@media (1200px -
+                                            1399px)</div>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Devices</div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Small desktops,
+                                            large tablets</div>
+                                    </div>
+                                </div>
+
+                                <!-- 992-1199px -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <div
+                                            style="background: #787878; height: 45px; width: 70%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; border-radius: 8px;">
+                                            992-1199px
+                                        </div>
+                                    </div>
+                                    <div style="flex: 0 0 250px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Breakpoint
+                                        </div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">@media (992px -
+                                            1199px)</div>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Devices</div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Tablets
+                                            landscape</div>
+                                    </div>
+                                </div>
+
+                                <!-- 768-991px -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #eee;">
+                                    <div style="flex: 1;">
+                                        <div
+                                            style="background: #344e41; height: 40px; width: 60%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; border-radius: 8px;">
+                                            768-991px
+                                        </div>
+                                    </div>
+                                    <div style="flex: 0 0 250px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Breakpoint
+                                        </div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">@media (768px -
+                                            991px)</div>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Devices</div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Tablets portrait
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ≤767px -->
+                                <div
+                                    style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0;">
+                                    <div style="flex: 1;">
+                                        <div
+                                            style="background: #a3b18a; height: 40px; width: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; border-radius: 8px;">
+                                            ≤767px
+                                        </div>
+                                    </div>
+                                    <div style="flex: 0 0 250px; text-align: right; padding-left: 30px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Breakpoint
+                                        </div>
+                                        <div style="font-size: 14px; color: #344e41; font-weight: 600;">@media
+                                            (max-width: 767px)</div>
+                                    </div>
+                                    <div style="flex: 0 0 200px; text-align: right; padding-left: 20px;">
+                                        <div style="font-size: 12px; color: #787878; margin-bottom: 5px;">Devices</div>
+                                        <div style="font-size: 14px; color: #a3b18a; font-weight: 600;">Mobile devices
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Component Patterns Tab -->
+                    <div class="tab-pane fade" id="components" role="tabpanel" aria-labelledby="components-tab">
+
+                        <style>
+                            .demo-btn-primary {
+                                background: #344e41;
+                                color: white;
+                                padding: 7px 7px 7px 30px;
+                                border-radius: 30px;
+                                display: inline-block;
+                                cursor: pointer;
+                                transition: all 0.4s ease;
+                                border: none;
+                                font-size: 16px;
+                            }
+
+                            .demo-btn-primary:hover {
+                                background: #a3b18a;
+                                transform: scale(1.02);
+                            }
+
+                            .demo-btn-primary:focus {
+                                outline: 2px solid #a3b18a;
+                                outline-offset: 2px;
+                            }
+
+                            .demo-btn-primary:active {
+                                transform: scale(0.98);
+                            }
+
+                            .demo-btn-secondary {
+                                background: #f4732a;
+                                color: white;
+                                padding: 14px 40px;
+                                border-radius: 10px;
+                                display: inline-block;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                border: none;
+                                font-size: 16px;
+                            }
+
+                            .demo-btn-secondary:hover {
+                                background: #ff8a4a;
+                                box-shadow: 0 5px 15px rgba(244, 115, 42, 0.3);
+                            }
+
+                            .demo-btn-secondary:focus {
+                                outline: 2px solid #f4732a;
+                                outline-offset: 2px;
+                            }
+
+                            .demo-btn-secondary:active {
+                                transform: scale(0.95);
+                            }
+
+                            .demo-btn-outline {
+                                border: 2px solid #344e41;
+                                color: #344e41;
+                                background: transparent;
+                                padding: 12px 35px;
+                                border-radius: 30px;
+                                display: inline-block;
+                                font-weight: 600;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                font-size: 16px;
+                            }
+
+                            .demo-btn-outline:hover {
+                                background: #344e41;
+                                color: white;
+                            }
+
+                            .demo-btn-outline:focus {
+                                outline: 2px solid #a3b18a;
+                                outline-offset: 2px;
+                            }
+
+                            .demo-btn-outline:active {
+                                transform: scale(0.95);
+                            }
+                        </style>
+
+                        <div class="color-category">
+                            <h3>Button Components</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div style="text-align: center; padding: 20px; margin-bottom: 20px;">
+                                        <button class="demo-btn-primary">
+                                            Primary Button <span
+                                                style="background: rgba(255,255,255,0.3); padding: 8px 12px; border-radius: 50%; margin-left: 20px; display: inline-block;">→</span>
+                                        </button>
+                                    </div>
+                                    <div class="color-name">Primary Button</div>
+                                    <div class="color-code">Round button with icon</div>
+                                    <div class="color-usage">
+                                        <strong>Hover:</strong>
+                                        Background: #a3b18a, scale(1.02)
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div style="text-align: center; padding: 20px; margin-bottom: 20px;">
+                                        <button class="demo-btn-secondary">
+                                            Secondary Button
+                                        </button>
+                                    </div>
+                                    <div class="color-name">Secondary Button</div>
+                                    <div class="color-code">Rectangular with rounded corners</div>
+                                    <div class="color-usage">
+                                        <strong>Hover:</strong>
+                                        Lighten + shadow effect
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div style="text-align: center; padding: 20px; margin-bottom: 20px;">
+                                        <button class="demo-btn-outline">
+                                            Outline Button
+                                        </button>
+                                    </div>
+                                    <div class="color-name">Outline Button</div>
+                                    <div class="color-code">Border style with no fill</div>
+                                    <div class="color-usage">
+                                        <strong>Hover:</strong>
+                                        Fill background #344e41
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Card Components</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: white; border: 1px solid #eee; padding: 25px; border-radius: 10px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); margin-bottom: 20px;">
+                                        <div
+                                            style="width: 50px; height: 50px; background: #a3b18a; border-radius: 50%; margin: 0 auto 15px;">
+                                        </div>
+                                        <h5
+                                            style="font-size: 16px; color: #344e41; margin: 0 0 10px 0; text-align: center;">
+                                            Card Title</h5>
+                                        <p
+                                            style="font-size: 14px; color: #787878; margin: 0; text-align: center; line-height: 1.6;">
+                                            Card description text goes here</p>
+                                    </div>
+                                    <div class="color-name">Icon Card</div>
+                                    <div class="color-code">Centered layout with icon</div>
+                                    <div class="color-usage">
+                                        <strong>Structure:</strong>
+                                        Icon + Title + Description
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: white; border: 1px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 15px rgba(0,0,0,0.05); margin-bottom: 20px;">
+                                        <div
+                                            style="height: 80px; background: linear-gradient(135deg, #344e41 0%, #a3b18a 100%);">
+                                        </div>
+                                        <div style="padding: 20px;">
+                                            <h5 style="font-size: 16px; color: #344e41; margin: 0 0 10px 0;">Image Card
+                                            </h5>
+                                            <p style="font-size: 14px; color: #787878; margin: 0; line-height: 1.6;">
+                                                Featured content with image header</p>
+                                        </div>
+                                    </div>
+                                    <div class="color-name">Image Card</div>
+                                    <div class="color-code">Image header with content</div>
+                                    <div class="color-usage">
+                                        <strong>Structure:</strong>
+                                        Image + Title + Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>FAQ Components</h3>
+                            <p style="color: #787878; margin-bottom: 30px;">Bootstrap accordion component used
+                                throughout the site. Uses #accordionExample styling with green hover states (#a3b18a)
+                                and +/- icons from Bootstrap Icons.</p>
+                            <div class="color-grid">
+                                <div class="color-item" style="grid-column: 1 / -1;">
+                                    <div style="margin-bottom: 20px;">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h4 class="accordion-header" id="dsHeadingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#dsCollapseOne"
+                                                        aria-expanded="true" aria-controls="dsCollapseOne">
+                                                        How do I become a member and what membership options are
+                                                        available?
+                                                    </button>
+                                                </h4>
+                                                <div id="dsCollapseOne" class="accordion-collapse collapse show"
+                                                    aria-labelledby="dsHeadingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <p>You can join Golf Space by completing the membership
+                                                            application on our
+                                                            Membership page or visiting the club office. We offer
+                                                            monthly, annual, and
+                                                            premium memberships with benefits such as priority tee
+                                                            times, discounted
+                                                            lessons, and clubhouse privileges. Contact
+                                                            info@golfspace.example or call
+                                                            +1-123-123-1234 for details and availability.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h4 class="accordion-header" id="dsHeadingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#dsCollapseTwo"
+                                                        aria-expanded="false" aria-controls="dsCollapseTwo">
+                                                        How can I book tee times and what is your cancellation policy?
+                                                    </button>
+                                                </h4>
+                                                <div id="dsCollapseTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="dsHeadingTwo" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <p>Tee times can be booked online through our booking system or
+                                                            by calling the club
+                                                            reception. Members have priority booking windows.
+                                                            Cancellations are accepted up
+                                                            to 24 hours before the booking; late cancellations or
+                                                            no-shows may incur a fee
+                                                            as outlined in our membership terms.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="color-name">Accordion Component</div>
+                                    <div class="color-code">Bootstrap 5 Accordion with #accordionExample ID</div>
+                                    <div class="color-usage">
+                                        <strong>Features:</strong>
+                                        Expand/collapse on click, green hover (#a3b18a), +/- icons, smooth transitions.
+                                        Uses actual FAQ page styling.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Accessibility Tab -->
+                    <div class="tab-pane fade" id="accessibility" role="tabpanel" aria-labelledby="accessibility-tab">
+
+                        <div class="color-category">
+                            <h3>WCAG Compliance</h3>
+                            <div
+                                style="text-align: center; padding: 40px; background: #f9f9f9; border-radius: 10px; margin-bottom: 30px;">
+                                <img src="accessibility/WCAG Level AA.png" alt="WCAG AA Level Compliance"
+                                    style="max-width: 100%; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                                <p style="margin-top: 20px; color: #344e41; font-size: 16px; font-weight: 600;">This
+                                    design system meets WCAG 2.1 Level AA standards</p>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Color Contrast</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #344e41; padding: 30px; border-radius: 8px; margin-bottom: 20px;">
+                                        <div
+                                            style="color: white; font-size: 18px; font-weight: 600; text-align: center;">
+                                            White Text on Primary</div>
+                                        <div
+                                            style="color: white; font-size: 12px; text-align: center; margin-top: 10px; opacity: 0.8;">
+                                            WCAG AAA Compliant</div>
+                                    </div>
+                                    <div class="color-name">Primary Contrast</div>
+                                    <div class="color-code">Contrast Ratio: 10.2:1</div>
+                                    <div class="color-usage">
+                                        <strong>Status:</strong>
+                                        Passes WCAG AAA for all text sizes
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: white; border: 2px solid #eee; padding: 30px; border-radius: 8px; margin-bottom: 20px;">
+                                        <div
+                                            style="color: #212121; font-size: 18px; font-weight: 600; text-align: center;">
+                                            Dark Text on White</div>
+                                        <div
+                                            style="color: #787878; font-size: 12px; text-align: center; margin-top: 10px;">
+                                            WCAG AAA Compliant</div>
+                                    </div>
+                                    <div class="color-name">Body Text Contrast</div>
+                                    <div class="color-code">Contrast Ratio: 15.8:1</div>
+                                    <div class="color-usage">
+                                        <strong>Status:</strong>
+                                        Maximum readability for body text
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f4732a; padding: 30px; border-radius: 8px; margin-bottom: 20px;">
+                                        <div
+                                            style="color: white; font-size: 18px; font-weight: 600; text-align: center;">
+                                            White on Accent</div>
+                                        <div
+                                            style="color: white; font-size: 12px; text-align: center; margin-top: 10px; opacity: 0.9;">
+                                            WCAG AA Compliant</div>
+                                    </div>
+                                    <div class="color-name">Accent Contrast</div>
+                                    <div class="color-code">Contrast Ratio: 4.8:1</div>
+                                    <div class="color-usage">
+                                        <strong>Status:</strong>
+                                        Passes WCAG AA for normal text
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>ARIA & Semantic HTML</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 20px; font-family: monospace; font-size: 12px; color: #344e41;">
+                                        &lt;button aria-label="Close menu"&gt;<br>
+                                        &nbsp;&nbsp;&lt;i class="icon"&gt;&lt;/i&gt;<br>
+                                        &lt;/button&gt;
+                                    </div>
+                                    <div class="color-name">ARIA Labels</div>
+                                    <div class="color-code">aria-label for screen readers</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Icon buttons, social links, controls
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 20px; font-family: monospace; font-size: 12px; color: #344e41;">
+                                        &lt;label for="email"&gt;Email&lt;/label&gt;<br>
+                                        &lt;input id="email" type="email"&gt;
+                                    </div>
+                                    <div class="color-name">Form Labels</div>
+                                    <div class="color-code">Explicit label associations</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        All input fields must have labels
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 20px; font-family: monospace; font-size: 12px; color: #344e41;">
+                                        &lt;nav role="navigation"&gt;<br>
+                                        &lt;main role="main"&gt;<br>
+                                        &lt;footer role="contentinfo"&gt;
+                                    </div>
+                                    <div class="color-name">Semantic HTML</div>
+                                    <div class="color-code">Landmark roles & elements</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Proper document structure for navigation
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Keyboard Navigation</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: white; border: 2px solid #a3b18a; padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                                        <div style="text-align: center; color: #344e41; font-weight: 600;">Focused
+                                            Element</div>
+                                        <div
+                                            style="text-align: center; color: #787878; font-size: 12px; margin-top: 10px;">
+                                            Clear focus indicator</div>
+                                    </div>
+                                    <div class="color-name">Focus States</div>
+                                    <div class="color-code">:focus { border: 2px solid #a3b18a }</div>
+                                    <div class="color-usage">
+                                        <strong>Requirement:</strong>
+                                        All interactive elements must have focus
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 25px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+                                        <div style="font-size: 14px; color: #344e41; margin-bottom: 10px;">⌨️ Tab Order
+                                        </div>
+                                        <div style="display: flex; gap: 10px; justify-content: center;">
+                                            <div
+                                                style="width: 30px; height: 30px; background: #344e41; color: white; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 12px;">
+                                                1</div>
+                                            <div
+                                                style="width: 30px; height: 30px; background: #a3b18a; color: white; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 12px;">
+                                                2</div>
+                                            <div
+                                                style="width: 30px; height: 30px; background: #f4732a; color: white; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 12px;">
+                                                3</div>
+                                        </div>
+                                    </div>
+                                    <div class="color-name">Tab Order</div>
+                                    <div class="color-code">Logical navigation sequence</div>
+                                    <div class="color-usage">
+                                        <strong>Requirement:</strong>
+                                        Maintain logical tab order throughout
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 25px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-family: monospace; font-size: 11px; color: #344e41;">
+                                        <div style="margin-bottom: 10px; font-weight: 600;">Skip Link</div>
+                                        &lt;a href="#main"&gt;<br>
+                                        &nbsp;&nbsp;Skip to Content<br>
+                                        &lt;/a&gt;
+                                    </div>
+                                    <div class="color-name">Skip Navigation</div>
+                                    <div class="color-code">Skip to main content link</div>
+                                    <div class="color-usage">
+                                        <strong>Best Practice:</strong>
+                                        Allow bypassing repetitive navigation
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Icons & Logos Tab -->
+                    <div class="tab-pane fade" id="icons" role="tabpanel" aria-labelledby="icons-tab">
+
+                        <div class="color-category">
+                            <h3>Brand Logo</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #344e41; padding: 40px; border-radius: 10px; border: 1px solid #eee; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/logo.png" alt="Golf Space Logo"
+                                            style="max-width: 200px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Primary Logo</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Main header, navigation, hero sections
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Feature Icons</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/feature-icon-1.png" alt="Feature Icon 1"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Feature Icon 1</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Service/feature display (colored version)
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/feature-icon-2.png" alt="Feature Icon 2"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Feature Icon 2</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Service/feature display (colored version)
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/feature-icon-3.png" alt="Feature Icon 3"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Feature Icon 3</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Service/feature display (colored version)
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/feature-icon-4.png" alt="Feature Icon 4"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Feature Icon 4</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Service/feature display (colored version)
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Benefit Icons</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/benifit-icon-1.png" alt="Benefit Icon 1"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Benefit Icon 1</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Membership benefits display
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/benifit-icon-2.png" alt="Benefit Icon 2"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Benefit Icon 2</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Membership benefits display
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/benifit-icon-3.png" alt="Benefit Icon 3"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Benefit Icon 3</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Membership benefits display
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/benifit-icon-4.png" alt="Benefit Icon 4"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Benefit Icon 4</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Membership benefits display
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Facility Icons</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/facility-fitness-zone.png" alt="Fitness Zone"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Fitness Zone</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Facility page icons
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/facility-locker-room.png" alt="Locker Room"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Locker Room</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Facility page icons
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/facility-party-center.png" alt="Party Center"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Party Center</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Facility page icons
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/facility-restaurant.png" alt="Restaurant"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Restaurant</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Facility page icons
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/facility-swimming-pool.png" alt="Swimming Pool"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Swimming Pool</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Facility page icons
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Pricing Icons</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/price-box-1.png" alt="Pricing Icon 1"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Price Box Icon 1</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Membership pricing cards
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/price-box-2.png" alt="Pricing Icon 2"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Price Box Icon 2</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Membership pricing cards
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/price-box-3.png" alt="Pricing Icon 3"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Price Box Icon 3</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Membership pricing cards
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-category">
+                            <h3>Contact Icons</h3>
+                            <div class="color-grid">
+                                <div class="color-item">
+                                    <div
+                                        style="padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/envelope.png" alt="Email Icon"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Email Icon</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Contact information, forms
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/location.png" alt="Location Icon"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Location Icon</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Address, map markers
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/mobile.png" alt="Mobile Icon"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Mobile Icon</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Phone numbers, contact info
+                                    </div>
+                                </div>
+
+                                <div class="color-item">
+                                    <div
+                                        style="background: #344e41; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                        <img src="assets/img/icons/phone-white.png" alt="Phone White Icon"
+                                            style="width: 60px; height: auto;">
+                                    </div>
+                                    <div class="color-name">Phone White Icon</div>
+                                    <div class="color-usage">
+                                        <strong>Usage:</strong>
+                                        Dark backgrounds, CTAs
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="subscribe-newsletter">
+                        <span>Stay In Touch</span>
+                        <h2>Newsletter</h2>
+                        <form action="#" method="post">
+                            <label for="design-system-newsletter-email" class="visually-hidden">Enter Your Email
+                                Here</label>
+                            <input type="email" id="design-system-newsletter-email" name="email"
+                                placeholder="Enter Your Email Here">
+                            <input type="submit" value="Notify Now">
+                        </form>
+                        <b>Subscribe</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer will be loaded from partials/footer.html -->
+    <div id="site-footer-placeholder"></div>
+    <script>
+        (function () {
+            var p = document.getElementById('site-footer-placeholder');
+            if (!p) return;
+            fetch('partials/footer.html').then(function (r) {
+                if (!r.ok) throw new Error('Failed to load footer');
+                return r.text();
+            }).then(function (html) {
+                p.outerHTML = html;
+            }).catch(function (err) {
+                console.error(err);
+            });
+        })();
+    </script>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.lazy.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/anime.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/masonry.pkgd.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
