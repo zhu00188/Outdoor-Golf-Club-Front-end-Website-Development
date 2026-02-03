@@ -1,0 +1,513 @@
+/* Design System Showcase Styles */
+.showcase-container {
+    max-width: 1400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, minmax(70px, auto));
+    gap: 12px;
+    perspective: 1000px;
+}
+
+.showcase-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(52, 78, 65, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #344e41, #a3b18a);
+}
+
+.showcase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(52, 78, 65, 0.25);
+}
+
+/* Typography Card */
+.typography-card {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+}
+
+.type-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.type-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #787878;
+    font-weight: 600;
+}
+
+.font-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #212121;
+    margin: 5px 0 3px 0;
+}
+
+.font-weights {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.weight-item {
+    font-size: 13px;
+    color: #344e41;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.weight-dot {
+    width: 6px;
+    height: 6px;
+    background: #a3b18a;
+    border-radius: 50%;
+}
+
+.type-display {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 0.9;
+    color: #212121;
+    margin: 20px 0;
+}
+
+.type-alphabet {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #212121;
+    letter-spacing: -1px;
+}
+
+/* Color Palette Card */
+.colors-card {
+    grid-column: 5 / 9;
+    grid-row: 1 / 3;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #212121;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.color-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.color-box {
+    flex: 1;
+    height: 55px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px;
+    font-size: 9px;
+    font-family: 'Courier New', monospace;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button States Card */
+.buttons-card {
+    grid-column: 9 / 13;
+    grid-row: 1 / 4;
+}
+
+.button-section {
+    margin-bottom: 25px;
+}
+
+.showcase-section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #787878;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.btn-demo {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn-primary-demo {
+    background: #344e41;
+    color: white;
+}
+
+.btn-primary-demo:hover {
+    background: #a3b18a;
+}
+
+.btn-secondary-demo {
+    background: #f4732a;
+    color: white;
+}
+
+.btn-outline-demo {
+    background: transparent;
+    color: #344e41;
+    border: 2px solid #344e41;
+}
+
+.btn-disabled {
+    background: #787878;
+    color: #ccc;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-demo i {
+    margin-left: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Spacing Card */
+.spacing-card {
+    grid-column: 1 / 4;
+    grid-row: 4 / 6;
+}
+
+.spacing-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.spacing-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.spacing-bar {
+    height: 24px;
+    background: linear-gradient(90deg, #344e41, #a3b18a);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.spacing-label {
+    font-size: 13px;
+    color: #787878;
+    min-width: 100px;
+}
+
+/* Icons Card */
+.icons-card {
+    grid-column: 4 / 7;
+    grid-row: 4 / 7;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-name {
+    font-size: 11px;
+    color: #787878;
+}
+
+/* Border Radius Card */
+.radius-card {
+    grid-column: 7 / 10;
+    grid-row: 3 / 5;
+}
+
+.radius-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.radius-box {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #344e41, #a3b18a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tags Card */
+.tags-card {
+    grid-column: 10 / 13;
+    grid-row: 4 / 6;
+}
+
+.tag-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag-item {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tag-default {
+    background: #e5e9e5;
+    color: #788a94;
+}
+
+.tag-active {
+    background: #344e41;
+    color: white;
+}
+
+/* Accordion Card */
+.accordion-card {
+    grid-column: 1 / 6;
+    grid-row: 6 / 9;
+}
+
+.accordion-demo {
+    margin-top: 20px;
+}
+
+.accordion-item-demo {
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accordion-header-demo {
+    padding: 15px 20px;
+    background: #efefef;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #212121;
+    transition: background 0.3s ease;
+}
+
+.accordion-header-demo:hover {
+    background: #a3b18a;
+    color: white;
+}
+
+.accordion-body-demo {
+    padding: 15px 20px;
+    color: #787878;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Cards Showcase */
+.cards-card {
+    grid-column: 6 / 10;
+    grid-row: 5 / 8;
+}
+
+.card-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.mini-card {
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mini-card:hover {
+    transform: scale(1.05);
+}
+
+.mini-card-icon {
+    width: 40px;
+    height: 40px;
+    background: #344e41;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.mini-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #212121;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.mini-card-text {
+    font-size: 12px;
+    color: #787878;
+    line-height: 1.5;
+}
+
+/* Logo Card */
+.logo-card {
+    grid-column: 10 / 13;
+    grid-row: 6 / 9;
+    background: #344e41;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-card::before {
+    background: linear-gradient(90deg, #a3b18a, #f4732a);
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.logo-subtitle {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.logo-tagline {
+    font-size: 12px;
+    margin-top: 20px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .showcase-container {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .typography-card {
+        grid-column: 1 / 7;
+        grid-row: auto;
+    }
+
+    .colors-card {
+        grid-column: 1 / 7;
+        grid-row: auto;
+    }
+
+    .buttons-card {
+        grid-column: 1 / 7;
+        grid-row: auto;
+    }
+
+    .spacing-card,
+    .icons-card,
+    .radius-card,
+    .tags-card,
+    .accordion-card,
+    .cards-card,
+    .logo-card {
+        grid-column: 1 / 7;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .type-display {
+        font-size: 80px;
+    }
+
+    .type-alphabet {
+        font-size: 28px;
+    }
+}
