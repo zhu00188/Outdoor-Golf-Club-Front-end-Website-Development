@@ -8124,3 +8124,76 @@ footer:after {
 		margin-bottom: -1px
 	}
 }
+
+/* Additional responsive fixes for small screens */
+@media (max-width: 767px) {
+	.container {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.sec-mar {
+		margin: 80px 0;
+	}
+
+	.sec-mar-top {
+		margin-top: 80px;
+	}
+
+	.sec-mar-bottom {
+		margin-bottom: 80px;
+	}
+
+	.sec-pad {
+		padding: 80px 0;
+	}
+
+	.sec-pad-top {
+		padding-top: 80px;
+	}
+
+	.sec-pad-bottom {
+		padding-bottom: 80px;
+	}
+
+	/* About area spacing after hero */
+	.about-area.sec-mar {
+		margin-top: 80px;
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.sec-mar {
+		margin: 60px 0;
+	}
+
+	.sec-mar-top {
+		margin-top: 60px;
+	}
+
+	.sec-mar-bottom {
+		margin-bottom: 60px;
+	}
+
+	.sec-pad {
+		padding: 60px 0;
+	}
+
+	.sec-pad-top {
+		padding-top: 60px;
+	}
+
+	.sec-pad-bottom {
+		padding-bottom: 60px;
+	}
+
+	/* About area spacing after hero */
+	.about-area.sec-mar {
+		margin-top: 60px;
+	}
+}
