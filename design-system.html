@@ -161,6 +161,93 @@
             .color-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            /* Typography tab responsive */
+            #typography .color-category>div>div[style*="display: flex"] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            #typography .color-category>div>div[style*="display: flex"]>div[style*="flex:"] {
+                flex: none !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 5px 0 !important;
+            }
+
+            /* Responsive tab responsive */
+            #responsive .color-category>div>div[style*="display: flex"] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            #responsive .color-category>div>div[style*="display: flex"]>div[style*="flex:"] {
+                flex: none !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 5px 0 !important;
+            }
+
+            #responsive .color-category>div>div[style*="display: flex"]>div:first-child {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .ds-tabs .nav-tabs .nav-link {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            /* Typography tab - stack elements vertically */
+            #typography .color-category>div {
+                padding: 20px !important;
+            }
+
+            #typography .color-category>div>div[style*="display: flex"] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                padding: 15px 0 !important;
+            }
+
+            #typography .color-category>div>div[style*="display: flex"]>div[style*="flex:"] {
+                flex: none !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 5px 0 !important;
+            }
+
+            /* Responsive tab - stack breakpoint info vertically */
+            #responsive .color-category>div {
+                padding: 20px !important;
+            }
+
+            #responsive .color-category>div>div[style*="display: flex"] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                padding: 15px 0 !important;
+            }
+
+            #responsive .color-category>div>div[style*="display: flex"]>div[style*="flex:"] {
+                flex: none !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 5px 0 !important;
+            }
+
+            #responsive .color-category>div>div[style*="display: flex"]>div:first-child {
+                margin-bottom: 10px;
+            }
+
+            #responsive .color-category>div>div[style*="display: flex"]>div[style*="background:"] {
+                width: 100% !important;
+                height: 40px !important;
+            }
         }
 
         /* Skip to main content link for keyboard navigation */
