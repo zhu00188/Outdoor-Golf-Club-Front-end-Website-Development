@@ -248,6 +248,30 @@
                 width: 100% !important;
                 height: 40px !important;
             }
+
+            /* Component Library - fix grid and spacing */
+            #components>div:first-child>div[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+
+            #components>div:first-child {
+                padding: 20px !important;
+            }
+
+            /* FAQ Accordion - prevent text overlap with icons */
+            #components .accordion-button {
+                padding-right: 50px !important;
+                word-wrap: break-word;
+                white-space: normal;
+                text-align: left;
+            }
+
+            #components .accordion-button::after {
+                position: absolute;
+                right: 15px;
+                flex-shrink: 0;
+            }
         }
 
         /* Skip to main content link for keyboard navigation */
