@@ -132,15 +132,17 @@ body {
 }
 
 .overview-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.6);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 2px solid rgba(52, 78, 65, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .overview-card:hover {
     transform: translateY(-5px);
+    border: 2px solid rgba(52, 78, 65, 0.3);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -185,13 +187,13 @@ body {
 }
 
 .challenge-box {
-    background: #fff4f0;
-    border-left: 5px solid #f4732a;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(244, 115, 42, 0.3);
 }
 
 .solution-box {
-    background: #f0f8f4;
-    border-left: 5px solid #344e41;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(52, 78, 65, 0.3);
 }
 
 .box-title {
@@ -523,16 +525,18 @@ body {
 }
 
 .accessibility-card {
-    background: white;
-    padding: 35px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 40px;
     border-radius: 12px;
-    border: 2px solid #e8f3e8;
+    border: 2px solid rgba(52, 78, 65, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .accessibility-card:hover {
-    border-color: #a3b18a;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    border: 2px solid rgba(52, 78, 65, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .accessibility-icon {
