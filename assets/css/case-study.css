@@ -15,7 +15,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #344e41 0%, #588157 100%);
+    background: #427a5e;
     color: white;
     padding: 120px 0 80px;
     position: relative;
@@ -38,17 +38,7 @@ body {
     z-index: 1;
 }
 
-.project-tag {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
+
 
 .hero-title {
     font-family: 'Playfair Display', serif;
@@ -56,6 +46,376 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+}
+
+/* Extracted styles from inline attributes in case-study.html */
+.cta-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.btn-hero.primary {
+    background: #344e41;
+    color: #fff;
+}
+
+.btn-hero.alt {
+    background: #fff;
+    color: #344e41;
+    border: 2px solid #344e41;
+}
+
+.center-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.center-cta .cta-row {
+    justify-content: center;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid rgba(52, 78, 65, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.panel-compact {
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(52, 78, 65, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.panel-glass {
+    width: 100%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(52, 78, 65, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Accent border for highlighted sections (light green) */
+.panel-accent {
+    border: 2px solid rgba(52, 78, 65, 0.15);
+    padding: 0;
+    border-radius: 12px;
+}
+
+.flex-col-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.small-muted {
+    font-size: 14px;
+    color: #787878;
+    margin: 8px 0 0 0;
+    line-height: 1.5;
+}
+
+.panel-light {
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.mt-25 {
+    margin-top: 25px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.icon-xl {
+    font-size: 48px;
+}
+
+.hero-kpi {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.panel-caption {
+    text-align: center;
+    color: #344e41;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role-list .role-item {
+    padding: 15px 0;
+    padding-left: 35px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.role-list .role-item:last-child {
+    border-bottom: none;
+}
+
+.role-list .bullet-dot {
+    position: absolute;
+    left: 0;
+    color: #344e41;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.accent {
+    color: #344e41;
+}
+
+.muted {
+    color: #787878;
+}
+
+.timeline-visual-block {
+    display: block;
+    min-height: auto;
+    padding: 0;
+}
+
+.panel-title {
+    color: #344e41;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.panel-title--small {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Left-aligned modifier for panel titles */
+.panel-title--left {
+    text-align: left;
+}
+
+.panel-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    object-fit: cover;
+}
+
+.panel-desc {
+    color: #787878;
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.figure-wrap {
+    margin-top: 30px;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.figure-caption {
+    text-align: center;
+    color: #787878;
+    font-size: 14px;
+    padding: 12px 16px;
+}
+
+.small-muted-center {
+    text-align: center;
+    color: #344e41;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.kpi-panel {
+    background: linear-gradient(135deg, #344e41 0%, #588157 100%);
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    color: white;
+    text-align: center;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+/* Results-specific: force five items in a row on large screens, keep responsive behavior */
+.kpi-panel.kpi-results .kpi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+}
+
+@media (min-width: 992px) {
+    .kpi-panel.kpi-results .kpi-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 48px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .kpi-panel.kpi-results .kpi-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.kpi-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.kpi-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+.kpi-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Match vertical padding of Measurable Outcomes items to Accessibility cards (40px top/bottom) */
+.kpi-panel.kpi-results .kpi-grid>div {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cta-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    margin: 0px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button-lg {
+    font-size: 18px;
+    padding: 18px 50px;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.timeline-visual-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.persona-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.border-left-primary {
+    border-left: 4px solid #344e41;
+}
+
+.border-left-accent {
+    border-left: 4px solid #a3b18a;
+}
+
+.border-left-orange {
+    border-left: 4px solid #f4732a;
+}
+
+.persona-title {
+    color: #344e41;
+    font-size: 16px;
+}
+
+.persona-goal {
+    font-size: 14px;
+    color: #344e41;
+    margin: 8px 0 12px 0;
+    font-weight: 600;
+}
+
+.persona-journey {
+    font-size: 14px;
+    color: #787878;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.persona-note {
+    font-style: italic;
+    color: #787878;
+    line-height: 1.6;
+}
+
+.spec-list {
+    font-size: 14px;
+    color: #787878;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.panel-compact .panel-desc {
+    margin-top: 15px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -334,6 +694,13 @@ body {
     min-height: 300px;
 }
 
+/* When used with the "timeline-visual-block" modifier, stack contents vertically */
+.timeline-visual.timeline-visual-block {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+}
+
 /* Design System Showcase */
 .ds-showcase {
     display: grid;
@@ -524,6 +891,13 @@ body {
     margin-top: 50px;
 }
 
+/* On desktop, force four cards in one row; stack naturally on smaller screens */
+@media (min-width: 992px) {
+    .accessibility-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .accessibility-card {
     background: rgba(255, 255, 255, 0.6);
     padding: 40px;
@@ -623,6 +997,7 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .cta-btn {
@@ -712,11 +1087,7 @@ body {
         margin-bottom: 25px;
     }
 
-    .project-tag {
-        font-size: 10px;
-        padding: 5px 12px;
-        letter-spacing: 0.5px;
-    }
+
 
     .project-meta {
         gap: 20px;
@@ -894,11 +1265,7 @@ body {
         margin-bottom: 25px;
     }
 
-    .project-tag {
-        font-size: 10px;
-        padding: 5px 12px;
-        letter-spacing: 0.5px;
-    }
+
 
     .project-meta {
         gap: 20px;
