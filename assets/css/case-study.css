@@ -92,7 +92,6 @@ body {
     padding: 40px;
     border-radius: 12px;
     border: 2px solid rgba(52, 78, 65, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .panel-compact {
@@ -100,7 +99,7 @@ body {
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.6);
     border: 2px solid rgba(52, 78, 65, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
 }
 
 .panel-glass {
@@ -109,7 +108,7 @@ body {
     background: rgba(255, 255, 255, 0.6);
     border: 2px solid rgba(52, 78, 65, 0.15);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
 }
 
 /* Accent border for highlighted sections (light green) */
@@ -229,7 +228,6 @@ body {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: block;
     object-fit: cover;
 }
@@ -269,7 +267,6 @@ body {
     padding: 20px;
     border-radius: 16px;
     margin-top: 50px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     color: white;
     text-align: center;
 }
@@ -451,7 +448,7 @@ body {
 
 /* Section Styles */
 .case-section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .section-bg-light {
@@ -496,14 +493,13 @@ body {
     padding: 40px;
     border-radius: 12px;
     border: 2px solid rgba(52, 78, 65, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
     transition: all 0.3s ease;
 }
 
 .overview-card:hover {
     transform: translateY(-5px);
     border: 2px solid rgba(52, 78, 65, 0.3);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .overview-card h3 {
@@ -631,12 +627,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 60px;
+    margin: 20px 0;
     position: relative;
-    padding: 40px;
+    padding: 5px;
     background: white;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .timeline-number {
@@ -686,8 +681,7 @@ body {
 .timeline-visual {
     background: white;
     border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -713,13 +707,11 @@ body {
     background: white;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .ds-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .ds-card-header {
@@ -753,7 +745,6 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .typography-sample h1 {
@@ -805,7 +796,6 @@ body {
     padding: 40px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     position: relative;
     overflow: hidden;
 }
@@ -853,7 +843,6 @@ body {
     background: white;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .result-image {
@@ -903,14 +892,12 @@ body {
     padding: 40px;
     border-radius: 12px;
     border: 2px solid rgba(52, 78, 65, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .accessibility-card:hover {
     transform: translateY(-5px);
     border: 2px solid rgba(52, 78, 65, 0.3);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .accessibility-icon {
@@ -1127,7 +1114,7 @@ body {
     }
 
     .case-section {
-        padding: 50px 0;
+        padding: 20px 0;
     }
 
     .section-title {
@@ -1200,15 +1187,15 @@ body {
 
     /* User personas and info architecture - reduce padding on mobile */
     .timeline-visual {
-        padding: 15px !important;
+        padding: 0px !important;
     }
 
     .timeline-visual>div[style*="padding: 30px"] {
-        padding: 15px !important;
+        padding: 0px !important;
     }
 
     .timeline-visual div[style*="padding: 15px"] {
-        padding: 12px !important;
+        padding: 0px !important;
     }
 
     .timeline-visual p {
@@ -1359,7 +1346,7 @@ body {
 
     /* Process Timeline - methodology section */
     .timeline-item {
-        padding: 20px 15px;
+        margin: 20px 0;
     }
 
     .timeline-content h3 {
@@ -1378,15 +1365,15 @@ body {
 
     /* User personas and info architecture - reduce padding on mobile */
     .timeline-visual {
-        padding: 15px !important;
+        padding: 0px !important;
     }
 
     .timeline-visual>div[style*="padding: 30px"] {
-        padding: 15px !important;
+        padding: 0px !important;
     }
 
     .timeline-visual div[style*="padding: 15px"] {
-        padding: 12px !important;
+        padding: 0px !important;
     }
 
     .timeline-visual p {
